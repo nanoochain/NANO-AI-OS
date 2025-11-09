@@ -1,0 +1,35 @@
+# AOSP directories
+.repo/
+art/
+bionic/
+bootable/
+build/
+cts/
+dalvik/
+development/
+device/
+external/
+frameworks/
+hardware/
+kernel/
+libcore/
+libnativehelper/
+packages/
+pdk/
+platform_testing/
+prebuilts/
+sdk/
+system/
+tools/
+vendor/
+developers/
+
+# Build outputs
+out/
+*.img
+*.zip
+
+# IDE files
+*.swp
+*.swo
+*~

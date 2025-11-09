@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nexus-ai-dev:
+    build: .
+    container_name: nexus-ai-os-dev
+    working_dir: /home/developer/nexus-ai-os
+    volumes:
+      # Mount the project directory
+      - .:/home/developer/nexus-ai-os
+      # Mount Android SDK cache (optional)
+      - android-cache:/home/developer/.android
+      # Mount Gradle cache (optional)
+      - gradle-cache:/home/developer/.gradle
+      # For GUI applications (if needed)
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - USER=developer
+      - DISPLAY=${DISPLAY}
+    privileged: true
+    stdin_open: true
+    tty: true
+
+volumes:
+  android-cache:
+  gradle-cache:
