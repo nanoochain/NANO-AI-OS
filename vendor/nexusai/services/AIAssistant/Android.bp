@@ -1,0 +1,23 @@
+// Android.bp for AI Assistant Service
+
+java_library_static {
+    name: "AIAssistantService",
+    srcs: ["src/**/*.java"],
+    platform_apis: true,
+    installable: true,
+    libs: [
+        "framework-ai",
+    ],
+}
+
+android_app {
+    name: "AIAssistantApp",
+    srcs: ["app/src/**/*.java"],
+    platform_apis: true,
+    privileged: true,
+    certificate: "platform",
+    libs: [
+        "framework-ai",
+        "AIAssistantService",
+    ],
+}

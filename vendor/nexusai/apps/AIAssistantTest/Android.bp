@@ -1,0 +1,12 @@
+// Android.bp for AI Assistant Test Application
+
+android_app {
+    name: "AIAssistantTest",
+    srcs: ["src/**/*.java"],
+    platform_apis: true,
+    privileged: true,
+    certificate: "platform",
+    libs: [
+        "framework-ai",
+    ],
+}
